@@ -12,7 +12,7 @@ const Page = async () => {
     "healthPackages",
     locale
   )) as unknown as HealthPackage[];
-
+  console.log("carePackages", carePackages);
   return (
     <div>
       <div className="bg-mainGreen">

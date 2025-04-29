@@ -17,7 +17,7 @@ const initI18next = async (locale: string, ns: string) => {
 };
 
 export async function getTranslation(
-  locale: string,
+  locale: "ar" | "en",
   ns: string,
   options = { keyPrefix: undefined }
 ) {

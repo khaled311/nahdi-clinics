@@ -5,7 +5,7 @@ import { defaultLocale } from "@/app/i18n/settings";
  * Get the current locale from cookies in server components
  * @returns The current locale (e.g., 'ar' or 'en')
  */
-export async function getLocale(): Promise<string> {
+export async function getLocale(): Promise<"ar" | "en"> {
   try {
     const reqHeaders = headers();
     const cookie = (await reqHeaders).get("Cookie");
@@ -13,7 +13,7 @@ export async function getLocale(): Promise<string> {
     const localeFromCookie = cookie
       ?.split("NEXT_LOCALE=")
       .at(1)
-      ?.substring(0, 2);
+      ?.substring(0, 2) as "ar" | "en";
 
     return localeFromCookie || defaultLocale;
   } catch (error) {
