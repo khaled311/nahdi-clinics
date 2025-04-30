@@ -1,0 +1,18 @@
+{
+  "categories": {
+    "title": "Categories",
+    "book": "Book",
+    "sub_title": "We have the best",
+    "doctors": "Doctors for you",
+    "online_consultation": "Book an online consultation"
+  },
+  "packages": {
+    "title": "Packages",
+    "sub_title": "We offer a wide range of packages to meet all your healthcare needs",
+    "toGetPackages": "To get packages"
+  },
+  "careExpress": {
+    "services": "Services",
+    "brief": "Available from 2:00 pm to 8:00 pm, except Fridays."
+  }
+}

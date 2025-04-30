@@ -7,14 +7,16 @@ import { getLocale } from "@/lib/get-locale";
 
 export const TabContent = async ({ tab }: { tab: Category }) => {
   const locale = await getLocale();
-  const { t } = await getTranslation(locale, "categories");
+  const { t } = await getTranslation(locale, "common");
 
   return (
     <div className="my-12">
       <div className="mb-4 grid lg:grid-cols-2 grid-cols-1 gap-4">
         <div>
           <div className="mb-4 flex flex-col gap-4">
-            <h2 className="text-[#1c958c] text-base">{t("title")}</h2>
+            <h2 className="text-[#1c958c] text-base">
+              {t("categories.title")}
+            </h2>
             <h2 className="text-[28px] text-textColor">{tab?.fields?.title}</h2>
           </div>
           <p className="text-mainBlue text-2xl leading-9">

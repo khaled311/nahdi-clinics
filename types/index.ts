@@ -86,5 +86,83 @@ export interface HealthPackage {
         price: number;
       };
     }[];
+    sectionId: string;
+  };
+}
+
+export interface expressPackage {
+  sys: {
+    id: string;
+  };
+  fields: {
+    subTitle: string;
+    title: string;
+    brief: string;
+    image: {
+      fields: {
+        title: string;
+        file: {
+          url: string;
+          details: {
+            image: {
+              width: number;
+              height: number;
+            };
+          };
+        };
+      };
+    };
+    packages: {
+      fields: {
+        image: {
+          fields: {
+            title: string;
+            file: {
+              url: string;
+              details: {
+                image: {
+                  width: number;
+                  height: number;
+                };
+              };
+            };
+          };
+        };
+        title: string;
+        price: number;
+        newPrice: number;
+      };
+    }[];
+    locationsSection: {
+      sys: {
+        id: string;
+      };
+      fields: {
+        title: string;
+        workingHours: {
+          workingHours: {
+            to: string;
+            from: string;
+          };
+        };
+        locationImage: {
+          fields: {
+            title: string;
+            file: {
+              url: string;
+              details: {
+                image: {
+                  width: number;
+                  height: number;
+                };
+              };
+            };
+          };
+        };
+        contactNumber: number;
+        locationUrl: string;
+        location: string;
+      };
+    }[];
   };
 }

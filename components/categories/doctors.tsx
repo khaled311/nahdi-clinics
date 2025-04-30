@@ -13,14 +13,18 @@ const Doctors = async () => {
     locale
   )) as unknown as Doctor[];
 
-  const { t } = await getTranslation(locale, "categories");
+  const { t } = await getTranslation(locale, "common");
 
   return (
     <div className="bg-white py-16">
       <div className="container">
         <div className="mb-4 flex flex-col gap-4">
-          <h2 className="text-[#1c958c] text-base">{t("sub_title")}</h2>
-          <h2 className="text-[28px] text-textColor">{t("doctors")}</h2>
+          <h2 className="text-[#1c958c] text-base">
+            {t("categories.sub_title")}
+          </h2>
+          <h2 className="text-[28px] text-textColor">
+            {t("categories.doctors")}
+          </h2>
         </div>
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-8">
           {doctors?.map((doctor) => (
@@ -53,11 +57,11 @@ const Doctors = async () => {
                 </p>
                 <div className="flex flex-col gap-4 mt-4">
                   <Link href={"https://healthp.nahdi.sa/"}>
-                    <Button className="w-full">{t("book")}</Button>
+                    <Button className="w-full">{t("categories.book")}</Button>
                   </Link>
                   <Link href={"https://healthp.nahdi.sa/"}>
                     <Button variant="outline" className="w-full">
-                      {t("online_consultation")}
+                      {t("categories.online_consultation")}
                     </Button>
                   </Link>
                 </div>

@@ -1,18 +1,26 @@
 import { getTranslation } from "@/app/i18n";
+import { Link } from "@/components/global/link";
 import { fetchEntries } from "@/lib/contentful";
 import { getLocale } from "@/lib/get-locale";
 import { cn } from "@/lib/utils";
 import { HealthPackage } from "@/types";
 import Image from "next/image";
 
+const icons = [
+  "/icons/tooth.svg",
+  "/icons/Beauty.svg",
+  "/icons/general-health.svg",
+  "/icons/mom-baby.svg",
+];
+
 const Page = async () => {
   const locale = await getLocale();
-  const { t } = await getTranslation(locale, "packages");
+  const { t } = await getTranslation(locale, "common");
   const carePackages = (await fetchEntries(
     "healthPackages",
     locale
   )) as unknown as HealthPackage[];
-  console.log("carePackages", carePackages);
+
   return (
     <div>
       <div className="bg-mainGreen">
@@ -26,9 +34,36 @@ const Page = async () => {
         </div>
       </div>
       <div className="container pt-12 pb-4">
-        <h2 className="text-xl font-bold mb-4 text-textColor">{t("title")}</h2>
-        <p className="mb-10 text-textColor">{t("sub_title")}</p>
-        <button className="text-mainBlue">{t("toGetPackages")}</button>
+        <h2 className="text-xl font-bold mb-4 text-textColor">
+          {t("packages.title")}
+        </h2>
+        <p className="mb-4 text-textColor">{t("packages.sub_title")}</p>
+        <div className="flex gap-4 items-center justify-between flex-wrap">
+          <div className="flex gap-4 items-center flex-wrap">
+            {carePackages.map((x, index) => (
+              <Link
+                key={x.sys.id}
+                href={`#` + x.fields.sectionId}
+                className="flex items-center gap-2"
+              >
+                <Image src={icons[index]} alt="tooth" width={24} height={24} />
+                <span>{x.fields.title}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
+            <p className="text-textColor">{t("packages.toGetPackages")}</p>
+            <Image
+              src={"/icons/phone.svg"}
+              alt="phone"
+              width={16}
+              height={16}
+            />
+            <Link href={"tel:920024673"}>
+              <span className="text-mainBlue">9200 24 673</span>
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="pb-12 bg-white">
         <div className="container">
@@ -41,6 +76,7 @@ const Page = async () => {
                   "border-t-0": x.sys.id === carePackages[0].sys.id,
                 }
               )}
+              id={x.fields.sectionId}
             >
               <h2 className="text-xl font-bold mb-4 text-textColor">
                 {x.fields.title}
@@ -53,7 +89,7 @@ const Page = async () => {
                     className="shadow-[0_0_10px_0_rgba(0,_0,_0,_0.1)]"
                   >
                     <img
-                      src={y.fields.image.fields.file.url}
+                      src={"https:" + y.fields.image.fields.file.url}
                       alt={y.fields.image.fields.title}
                     />
                     <div className="p-4">
