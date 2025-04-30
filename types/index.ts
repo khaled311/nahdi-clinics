@@ -114,6 +114,7 @@ export interface expressPackage {
     };
     packages: {
       fields: {
+        locationDetails: string;
         image: {
           fields: {
             title: string;
@@ -161,8 +162,47 @@ export interface expressPackage {
         };
         contactNumber: number;
         locationUrl: string;
-        location: string;
+        location: { sys: { id: string } };
       };
     }[];
   };
+}
+
+export interface categorizedCareExpressLocations {
+  label: string;
+  id: string;
+  locations: {
+    sys: any;
+    fields: {
+      title: string;
+      locationDetails?: string;
+      workingHours: {
+        workingHours: {
+          to: string;
+          from: string;
+        };
+      };
+      locationImage: {
+        fields: {
+          title: string;
+          file: {
+            url: string;
+            details: {
+              image: {
+                width: number;
+                height: number;
+              };
+            };
+          };
+        };
+      };
+      contactNumber: number;
+      locationUrl: string;
+      location: {
+        sys: {
+          id: string;
+        };
+      };
+    };
+  }[];
 }

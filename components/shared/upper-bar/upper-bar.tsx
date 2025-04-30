@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { LanguageSwitcher } from "@/components/shared/language-switcher/language-switcher";
+import { Link } from "@/components/global/link";
 
 export const UpperBar = () => {
   return (
@@ -38,13 +38,19 @@ export const UpperBar = () => {
           </div>
           <div className="flex items-center gap-4">
             <div className="items-center gap-2 hidden lg:flex">
-              <Link href={"#"} className="text-base font-semibold">
+              <Link
+                href={"https://healthp.nahdi.sa/"}
+                className="text-base font-semibold"
+              >
                 حجز موعد
               </Link>
-              <Link href={"#"} className="text-base font-semibold">
-                عننا
+              <Link href={"/about-us"} className="text-base font-semibold">
+                نبذة عننا
               </Link>
-              <Link href={"#"} className="text-base font-semibold">
+              <Link
+                href={"https://healthp.nahdi.sa/"}
+                className="text-base font-semibold"
+              >
                 مساعدة
               </Link>
             </div>

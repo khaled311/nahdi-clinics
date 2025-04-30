@@ -13,6 +13,28 @@
   },
   "careExpress": {
     "services": "Services",
-    "brief": "Available from 2:00 pm to 8:00 pm, except Fridays."
+    "brief": "Available from 2:00 pm to 8:00 pm, except Fridays.",
+    "locations": "Locations",
+    "workingHours": "Working Hours",
+    "allDaysExceptFriday": "All days except Friday",
+    "contactDetails": "Contact Details",
+    "goToLocation": "Go to Location"
+  },
+  "about": {
+    "sub_title": "About Us",
+    "title": "Nahdi Care Clinics",
+    "purpose": "Our Purpose",
+    "vision": "Our Vision",
+    "brief": "High-quality care, from our heart to yours. At Nahdi Care Clinics, we go beyond to meet your unique needs. This is our vision, which our team pursues daily in Nahdi Care Clinics.",
+    "goal": {
+      "title": "Our Goal",
+      "bullets": [
+        "To provide patient-centered care",
+        "Ensure operational efficiency",
+        "Ensure patient safety and care quality",
+        "Ensure excellence in service for patients and doctors"
+      ]
+    },
+    "partners": "Our Partners"
   }
 }
