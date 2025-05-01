@@ -23,14 +23,14 @@ export const TabContent = async ({ tab }: { tab: Category }) => {
             {tab?.fields?.brief}
           </p>
           <Image
-            src={`https:${tab?.fields?.image?.fields?.file?.url!}`}
+            src={`https:${tab.fields.image.fields.file.url}`}
             alt="categories"
-            width={tab?.fields?.image?.fields?.file?.details?.image?.width!}
-            height={tab?.fields?.image?.fields?.file?.details?.image?.height!}
+            width={tab.fields.image.fields.file.details.image.width}
+            height={tab.fields.image.fields.file.details.image.height}
             className="lg:hidden block mt-4"
           />
           <div className="flex flex-col gap-6 mt-6">
-            {tab?.fields?.list?.map((item: string) => (
+            {tab.fields.list.map((item: string) => (
               <div className="flex items-center gap-2" key={item}>
                 <Image
                   src="/true.svg"
@@ -48,10 +48,10 @@ export const TabContent = async ({ tab }: { tab: Category }) => {
           <Button className="mt-12">{t("book")}</Button>
         </div>
         <Image
-          src={`https:${tab?.fields?.image?.fields?.file?.url!}`}
+          src={`https:${tab.fields.image.fields.file.url}`}
           alt="categories"
-          width={tab?.fields?.image?.fields?.file?.details?.image?.width!}
-          height={tab?.fields?.image?.fields?.file?.details?.image?.height!}
+          width={tab.fields.image.fields.file.details.image.width}
+          height={tab.fields.image.fields.file.details.image.height}
           className="hidden lg:block"
         />
       </div>

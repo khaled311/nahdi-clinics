@@ -13,13 +13,14 @@ export interface Category {
     id: string;
   };
   fields: {
-    title?: string;
-    brief?: string;
-    list?: string[];
-    image?: {
+    label: string;
+    title: string;
+    brief: string;
+    list: string[];
+    image: {
       fields: {
-        title?: string;
-        description?: string;
+        title: string;
+        description: string;
         file: {
           url: string;
           details: {
@@ -205,4 +206,41 @@ export interface categorizedCareExpressLocations {
       };
     };
   }[];
+}
+
+export interface Location {
+  sys: {
+    id: string;
+  };
+  fields: {
+    title?: string;
+    locationDetails?: string;
+    workingHours?: {
+      workingHours?: {
+        from?: string;
+        to?: string;
+      };
+    };
+    locationImage?: {
+      fields?: {
+        title?: string;
+        file?: {
+          url?: string;
+          details?: {
+            image?: {
+              width?: number;
+              height?: number;
+            };
+          };
+        };
+      };
+    };
+    contactNumber?: number;
+    locationUrl?: string;
+    location?: {
+      sys?: {
+        id?: string;
+      };
+    };
+  };
 }

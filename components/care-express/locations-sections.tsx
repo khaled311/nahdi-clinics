@@ -7,7 +7,6 @@ import { useTranslation } from "@/app/i18n/client";
 import { useLocale } from "@/lib/use-locale";
 import { cn } from "@/lib/utils";
 import { LocationsFilter } from "./locations-filter";
-import { Link } from "../global/link";
 import { LocationCard } from "./location-card";
 
 type Props = {
@@ -17,7 +16,7 @@ type Props = {
     label: string;
     id: string;
     locations: {
-      sys: any;
+      sys: { id: string };
       fields: {
         title: string;
         workingHours: {
@@ -110,9 +109,11 @@ export const LocationsSections = ({
                   key={x.fields.image.fields.title}
                   className="shadow-[0_0_10px_0_rgba(0,_0,_0,_0.1)]"
                 >
-                  <img
-                    src={x.fields.image.fields.file.url}
+                  <Image
+                    src={"https:" + x.fields.image.fields.file.url}
                     alt={x.fields.image.fields.title}
+                    width={300}
+                    height={150}
                   />
                   <div className="p-4">
                     <h3 className="text-base text-textColor mb-1">

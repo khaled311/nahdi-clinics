@@ -1,4 +1,3 @@
-import { getTranslation } from "@/app/i18n";
 import { Link } from "@/components/global/link";
 import { fetchEntries } from "@/lib/contentful";
 import { getLocale } from "@/lib/get-locale";
@@ -6,7 +5,6 @@ import Image from "next/image";
 
 const page = async () => {
   const locale = await getLocale();
-  const { t } = await getTranslation(locale, "common");
   const developmentImage = (
     await fetchEntries("development", locale)
   )[0] as unknown as {

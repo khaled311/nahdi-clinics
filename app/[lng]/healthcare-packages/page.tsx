@@ -88,9 +88,11 @@ const Page = async () => {
                     key={y.fields.image.fields.title}
                     className="shadow-[0_0_10px_0_rgba(0,_0,_0,_0.1)]"
                   >
-                    <img
+                    <Image
                       src={"https:" + y.fields.image.fields.file.url}
                       alt={y.fields.image.fields.title}
+                      width={300}
+                      height={150}
                     />
                     <div className="p-4">
                       <h3 className="text-base text-textColor mb-1">

@@ -6,7 +6,10 @@ import { getLocale } from "@/lib/get-locale";
 
 const TabsComponent = async () => {
   const locale = await getLocale();
-  const categories = (await fetchEntries("categories", locale)) as Category[];
+  const categories = (await fetchEntries(
+    "categories",
+    locale
+  )) as unknown as Category[];
 
   return (
     <Tabs

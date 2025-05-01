@@ -1,5 +1,5 @@
 import { getLocale } from "@/lib/get-locale";
-import { fetchEntries } from "@/lib/contentful";
+// import { fetchEntries } from "@/lib/contentful";
 import Image from "next/image";
 // import { aboutDetails } from "@/types";
 import { getTranslation } from "@/app/i18n";
@@ -224,6 +224,7 @@ const page = async () => {
                 width={170}
                 height={92}
                 className="mix-blend-multiply"
+                key={x}
               />
             ))}
           </div>
