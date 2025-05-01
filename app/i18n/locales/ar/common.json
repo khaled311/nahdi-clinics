@@ -13,7 +13,9 @@
     "atYourService": "نحن في خدمتك",
     "nahdiCats": "أقسام النهدي",
     "allCategories": "جميع الاقسام",
-    "moreInfo": "المزيد من المعلومات"
+    "moreInfo": "المزيد من المعلومات",
+    "bookAppointment": "حجز موعد",
+    "searchDoctor": "بحث عن طبيب"
   },
   "packages": {
     "title": "باقات الرعاية الصحية",
