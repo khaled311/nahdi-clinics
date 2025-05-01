@@ -1,11 +1,15 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/components/global/link";
+import { getLocale } from "@/lib/get-locale";
+import { getTranslation } from "@/app/i18n";
 
-export const FooterTop = () => {
+export const FooterTop = async () => {
+  const locale = await getLocale();
+  const { t } = await getTranslation(locale, "common");
   return (
     <div className="bg-[url('/footer-top-bg.jpg')] bg-cover bg-no-repeat pt-12">
       <div className="container">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           <div className="col-span-2">
             <h2 className="text-[32px] text-white mb-4">
               تحميل تطبيق عيادات نهدي كير

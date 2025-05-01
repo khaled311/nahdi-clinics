@@ -1,15 +1,30 @@
 {
+  "home": {
+    "forYouSection": {
+      "customizedForYou": "Customized for you"
+    }
+  },
   "categories": {
     "title": "Categories",
     "book": "Book",
     "sub_title": "We have the best",
     "doctors": "Doctors for you",
-    "online_consultation": "Book an online consultation"
+    "online_consultation": "Book an online consultation",
+    "atYourService": "We are at your service",
+    "allCategories": "All categories",
+    "nahdiCats": "Nahdi care categories",
+    "bookAppointment": "Book an appointment",
+    "searchDoctor": "Search for a doctor",
+    "moreInfo": "More information"
   },
   "packages": {
     "title": "Packages",
     "sub_title": "We offer a wide range of packages to meet all your healthcare needs",
-    "toGetPackages": "To get packages"
+    "toGetPackages": "To get packages",
+    "teeth": "Teeth",
+    "beauty": "Beauty",
+    "generalHealth": "General Health",
+    "momAndBaby": "Mom and Baby"
   },
   "careExpress": {
     "services": "Services",

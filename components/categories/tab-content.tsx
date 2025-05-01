@@ -4,6 +4,7 @@ import { Category } from "@/types";
 import { Button } from "@/components/ui/button";
 import { getTranslation } from "@/app/i18n";
 import { getLocale } from "@/lib/get-locale";
+import { Link } from "../global/link";
 
 export const TabContent = async ({ tab }: { tab: Category }) => {
   const locale = await getLocale();
@@ -45,7 +46,9 @@ export const TabContent = async ({ tab }: { tab: Category }) => {
               </div>
             ))}
           </div>
-          <Button className="mt-12">{t("book")}</Button>
+          <Link href={"https://healthp.nahdi.sa/"}>
+            <Button className="mt-12">{t("categories.book")}</Button>
+          </Link>
         </div>
         <Image
           src={`https:${tab.fields.image.fields.file.url}`}

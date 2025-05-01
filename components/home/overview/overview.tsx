@@ -7,7 +7,7 @@ export const Overview = () => {
       <div className="container">
         <p className="secondary-title">لماذا تختار عيادات النهدي؟</p>
         <h2 className="main-title">رعاية تبدأ من القلب</h2>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto scrollbar-hidden">
           <div className="flex lg:items-center justify-between mb-12 lg:w-auto w-max gap-4">
             <div className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]">
               <Image

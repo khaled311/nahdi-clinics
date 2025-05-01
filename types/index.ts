@@ -244,3 +244,26 @@ export interface Location {
     };
   };
 }
+export interface HomeCategory {
+  sys: {
+    id: string;
+  };
+  fields: {
+    image: {
+      fields: {
+        title: string;
+        file: {
+          url: string;
+          details: {
+            image: {
+              width: number;
+              height: number;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    brief: string;
+  };
+}

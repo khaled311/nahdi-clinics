@@ -20,8 +20,8 @@ const TabsComponent = async () => {
       <div className="border-b border-solid border-[#dee2e6] py-2 flex items-center justify-center bg-white">
         <div className="container">
           <div className="overflow-x-scroll scrollbar-hidden">
-            <TabsList className="gap-2 [&>button]:text-base w-max [&>button]:data-[state=active]:bg-transparent [&>button]:data-[state=active]:text-mainBlue [&>button]:data-[state=active]:shadow-none bg-transparent">
-              {categories?.map((tab, index) => (
+            <TabsList className="gap-1 [&>button]:text-base w-max [&>button]:data-[state=active]:bg-transparent [&>button]:data-[state=active]:text-mainBlue [&>button]:data-[state=active]:shadow-none bg-transparent">
+              {categories?.reverse()?.map((tab, index) => (
                 <TabsTrigger key={tab.sys.id} value={`tab${index + 1}`}>
                   <span>{tab?.fields?.title}</span>
                 </TabsTrigger>

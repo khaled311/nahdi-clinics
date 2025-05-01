@@ -16,7 +16,7 @@ export const AlaBabk = () => {
             جميع الاقسام
           </Link>
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto scrollbar-hidden">
           <div className="lg:grid grid-cols-4 gap-4 flex mb-12 w-max lg:w-auto lg:[&>div]:w-auto [&>div]:w-[312px]">
             <div className="gap-12 rounded-[20px]">
               <Image

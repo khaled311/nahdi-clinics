@@ -1,15 +1,28 @@
 {
+  "home": {
+    "forYouSection": {
+      "customizedForYou": "مخصصة لك"
+    }
+  },
   "categories": {
     "title": "القسم",
     "book": "حجز موعد",
     "sub_title": "لدينا الأفضل",
     "doctors": "أطباء من أجلك!",
-    "online_consultation": "احجز استشارة طبية اونلاين"
+    "online_consultation": "احجز استشارة طبية اونلاين",
+    "atYourService": "نحن في خدمتك",
+    "nahdiCats": "أقسام النهدي",
+    "allCategories": "جميع الاقسام",
+    "moreInfo": "المزيد من المعلومات"
   },
   "packages": {
     "title": "باقات الرعاية الصحية",
     "sub_title": "تقدم عيادات النهدي كير الآن العديد من الباقات مع الخدمات التي تلبي جميع احتياجاتك الصحية",
-    "toGetPackages": "للحصول على الباقات"
+    "toGetPackages": "للحصول على الباقات",
+    "teeth": "الأسنان",
+    "beauty": "الجمال",
+    "generalHealth": "الصحة العامة",
+    "momAndBaby": "الام والابن"
   },
   "careExpress": {
     "services": "الخدمات",

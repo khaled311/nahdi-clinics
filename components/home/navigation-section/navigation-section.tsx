@@ -11,7 +11,7 @@ export const NavigationSection = () => {
   return (
     <div className="mt-12">
       <div className="container">
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto scrollbar-hidden">
           <div className="flex items-center gap-4 lg:w-auto w-max">
             <Link
               href="#"
