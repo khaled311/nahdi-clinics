@@ -2,6 +2,13 @@
   "home": {
     "forYouSection": {
       "customizedForYou": "Customized for you"
+    },
+    "availableOn": "Available on",
+    "help": "Help",
+    "downloadApp": "Download app",
+    "overview": {
+      "title": "Why choose Nahdi Care?",
+      "sub_title": "Care starts from the heart"
     }
   },
   "categories": {
@@ -51,5 +58,52 @@
       ]
     },
     "partners": "Our Partners"
+  },
+  "overview": {
+    "title": "Why choose Nahdi Care?",
+    "sub_title": "Care starts from the heart"
+  },
+  "help": {
+    "title": "Your health is our priority",
+    "subtitle": "Contact us",
+    "send_message": "Send us a message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "currency": "SAR",
+  "downloadApp": "Download app",
+  "downloadAppDescription": "Book an online consultation and take advantage of our health services",
+  "quickConsultation": "Quick consultation with a doctor",
+  "footerCareExpress": "Care Express",
+  "footerMedicalServices": "Medical services",
+  "showMedicalRecords": "Show medical records and test results and electronic prescriptions",
+  "manyReasonsToEnjoy": "Many reasons to enjoy",
+  "footer": {
+    "description": "High-quality care, from our heart to yours. At Nahdi Care Clinics, we go beyond to meet your unique needs. This is our vision, which our team pursues daily in Nahdi Care Clinics.",
+    "moreInfo": "For more information",
+    "department": {
+      "title": "Departments",
+      "children": "Pediatrics",
+      "radiology": "Radiology",
+      "gynecology": "Gynecology",
+      "endocrinology": "Endocrinology",
+      "ophthalmology": "Ophthalmology",
+      "all": "All"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "doctors": "Doctors",
+      "packages": "Packages",
+      "homeCare": "Home Care",
+      "departments": "Departments",
+      "locations": "Locations",
+      "contactUs": "Contact Us"
+    },
+    "copyright": "All rights reserved to Nahdi Care Clinics 2024 ©"
   }
 }

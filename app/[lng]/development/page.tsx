@@ -5,9 +5,10 @@ import Image from "next/image";
 
 const page = async () => {
   const locale = await getLocale();
-  const developmentImage = (
-    await fetchEntries("development", locale)
-  )[0] as unknown as {
+  const developmentImage = (await fetchEntries(
+    "development",
+    locale
+  )) as unknown as {
     fields: {
       image: {
         fields: {

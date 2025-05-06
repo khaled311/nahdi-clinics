@@ -1,12 +1,24 @@
+import { getTranslation } from "@/app/i18n";
+import { fetchEntries } from "@/lib/contentful";
+import { getLocale } from "@/lib/get-locale";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroSection as THeroSection } from "@/types";
 
-export const HeroSection = () => {
+export const HeroSection = async () => {
+  const locale = await getLocale();
+  const { t } = await getTranslation(locale, "common");
+  const data = (await fetchEntries(
+    "heroSection",
+    locale
+  )) as unknown as THeroSection;
+
   return (
-    <div className="relative isolate overflow-hidden bg-[url('/banner-ar.jpg')] bg-cover bg-center p-[64px_0_48px]">
+    <div className="relative isolate overflow-hidden p-[64px_0_48px]">
+      <div className="absolute inset-0 ltr:scale-x-[-1] rtl:scale-x-100 bg-[url('/banner-ar.jpg')] bg-cover bg-center bg-no-repeat z-[-1]"></div>
       <div className="container">
         <h1 className="lg:text-4xl text-[27px] font-semibold text-[#212529] max-w-[450px] leading-[60x]">
-          تواصل مع طبيبك اونلاين من راحة بيتك
+          {data?.fields?.title}
         </h1>
         <div className="flex items-center gap-4 mt-8">
           <Link
@@ -14,18 +26,20 @@ export const HeroSection = () => {
             className="bg-mainBlue p-[6px_12px] rounded-[6px] text-base text-white font-semibold transition-all border border-solid border-mainBlue hover:bg-transparent hover:text-mainBlue"
             target="_blank"
           >
-            احجز موعد الآن
+            {t("categories.bookAppointment")}
           </Link>
           <Link
             href={"https://healthp.nahdi.sa/patientportal/"}
             className="text-base font-semibold p-[6px_12px] rounded-[6px] transition-all text-mainBlue border border-solid border-mainBlue hover:bg-mainBlue hover:text-white"
             target="_blank"
           >
-            ابحث عن طبيب
+            {t("categories.searchDoctor")}
           </Link>
         </div>
         <div className="items-center gap-4 mt-6 hidden lg:flex">
-          <p className="text-base font-semibold text-[#212529]">متوفر في</p>
+          <p className="text-base font-semibold text-[#212529]">
+            {t("home.availableOn")}
+          </p>
           <div className="flex items-center gap-2">
             <Link
               href={

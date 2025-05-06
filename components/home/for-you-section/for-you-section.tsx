@@ -23,7 +23,7 @@ export const ForYouSection = async () => {
   )) as unknown as HealthPackage[];
 
   return (
-    <div className="py-12">
+    <div className="py-12" id="health-packages">
       <div className="container">
         <p className="font-semibold text-mainGreen text-xl mb-4">
           {t("home.forYouSection.customizedForYou")}
@@ -38,24 +38,30 @@ export const ForYouSection = async () => {
             {t("packages.toGetPackages")}
           </Link>
         </div>
-        <Tabs defaultValue={healthPackages[0].sys.id} dir="rtl">
-          <TabsList className="!flex items-center gap-4">
-            {healthPackages.map((x, index) => (
-              <TabsTrigger
-                key={x.sys.id}
-                value={x.sys.id}
-                className="!w-max flex-auto"
-              >
-                <Image
-                  src={icons[index]}
-                  alt={x.fields.title}
-                  width={24}
-                  height={24}
-                />
-                <span>{x.fields.title}</span>
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <Tabs
+          defaultValue={healthPackages[0].sys.id}
+          dir={locale === "ar" ? "rtl" : "ltr"}
+          className="overflow-x-auto scrollbar-hidden"
+        >
+          <div className="overflow-x-auto scrollbar-hidden">
+            <TabsList className="!flex items-center gap-4">
+              {healthPackages.map((x, index) => (
+                <TabsTrigger
+                  key={x.sys.id}
+                  value={x.sys.id}
+                  className="!w-max flex-auto"
+                >
+                  <Image
+                    src={icons[index]}
+                    alt={x.fields.title}
+                    width={24}
+                    height={24}
+                  />
+                  <span>{x.fields.title}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
           {healthPackages?.map((healthPackage) => (
             <TabsContent
               key={healthPackage.sys.id}
@@ -69,7 +75,7 @@ export const ForYouSection = async () => {
           href={"/health-packages"}
           className="block lg:hidden border border-solid border-mainBlue py-2 px-4 text-center rounded-sm text-xl text-mainBlue"
         >
-          جميع الاقسام
+          {t("packages.toGetPackages")}
         </Link>
       </div>
     </div>

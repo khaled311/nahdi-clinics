@@ -5,9 +5,10 @@ import { expressPackage } from "@/types";
 
 const Page = async () => {
   const locale = await getLocale();
-  const nahdiCareExpress = (
-    await fetchEntries("nahdiCareExpress", locale)
-  )[0] as unknown as expressPackage;
+  const nahdiCareExpress = (await fetchEntries(
+    "nahdiCareExpress",
+    locale
+  )) as unknown as expressPackage;
   const locationsFilter = (await fetchEntries(
     "location",
     locale

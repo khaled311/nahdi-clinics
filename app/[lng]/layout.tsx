@@ -28,17 +28,18 @@ export default async function LngLayout({
 }) {
   const lng = (await params).lng;
   const dir = lng === "ar" ? "rtl" : "ltr";
+
   return (
-    <LocaleProvider locale={lng}>
-      <html lang={lng} dir={dir} suppressHydrationWarning>
-        <body className={`${cairo.className} ${cairo.variable} antialiased`}>
-          <UpperBar />
-          <Navbar />
-          {children}
-          <FooterTop />
-          <Footer />
-        </body>
-      </html>
-    </LocaleProvider>
+    // <LocaleProvider locale={lng}>
+    <html lang={lng} dir={dir || "rtl"}>
+      <body className={`${cairo.className} ${cairo.variable} antialiased`}>
+        <UpperBar />
+        <Navbar />
+        {children}
+        <FooterTop />
+        <Footer />
+      </body>
+    </html>
+    // </LocaleProvider>
   );
 }

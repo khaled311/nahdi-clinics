@@ -25,7 +25,9 @@ export async function fetchEntries(
 
   try {
     const entries = await client.getEntries(options);
-    return entries.items;
+    const dataToBeReturned =
+      entries.items.length > 1 ? entries.items : entries.items[0];
+    return dataToBeReturned;
   } catch (error) {
     console.error(
       `Error fetching entries for content type ${contentType}:`,

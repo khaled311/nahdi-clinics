@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { LanguageSwitcher } from "@/components/shared/language-switcher/language-switcher";
 import { Link } from "@/components/global/link";
+import { getLocale } from "@/lib/get-locale";
+import { getTranslation } from "@/app/i18n";
 
-export const UpperBar = () => {
+export const UpperBar = async () => {
+  const locale = await getLocale();
+  const { t } = await getTranslation(locale, "common");
   return (
     <div className="bg-mainGreen p-[8px_0_16px]">
       <div className="container">
@@ -42,16 +46,13 @@ export const UpperBar = () => {
                 href={"https://healthp.nahdi.sa/"}
                 className="text-base font-semibold"
               >
-                حجز موعد
+                {t("categories.bookAppointment")}
               </Link>
               <Link href={"/about-us"} className="text-base font-semibold">
-                نبذة عننا
+                {t("about.sub_title")}
               </Link>
-              <Link
-                href={"https://healthp.nahdi.sa/"}
-                className="text-base font-semibold"
-              >
-                مساعدة
+              <Link href={"/help"} className="text-base font-semibold">
+                {t("home.help")}
               </Link>
             </div>
             <div className="flex items-center">

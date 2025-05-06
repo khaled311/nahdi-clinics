@@ -7,16 +7,15 @@ export const FooterTop = async () => {
   const locale = await getLocale();
   const { t } = await getTranslation(locale, "common");
   return (
-    <div className="bg-[url('/footer-top-bg.jpg')] bg-cover bg-no-repeat pt-12">
+    <div
+      className="bg-[url('/footer-top-bg.jpg')] bg-cover bg-no-repeat pt-12"
+      id="download-app-content"
+    >
       <div className="container">
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           <div className="col-span-2">
-            <h2 className="text-[32px] text-white mb-4">
-              تحميل تطبيق عيادات نهدي كير
-            </h2>
-            <p className="text-white mb-4">
-              احجز استشارة طبية اونلاين واستفد من خدماتنا الصحية المتعددة
-            </p>
+            <h2 className="text-[32px] text-white mb-4">{t("downloadApp")}</h2>
+            <p className="text-white mb-4">{t("downloadAppDescription")}</p>
             <div className="flex gap-4">
               <Link href="https://apps.apple.com/us/app/nahdicare-clinics/id1462753220">
                 <Image
@@ -46,7 +45,7 @@ export const FooterTop = async () => {
                   height={26}
                   quality={100}
                 />
-                <p className="text-white text-xl">استشارة فورية مع طبيب</p>
+                <p className="text-white text-xl">{t("quickConsultation")}</p>
               </div>
               <div className="flex gap-2 items-center">
                 <Image
@@ -56,19 +55,7 @@ export const FooterTop = async () => {
                   height={26}
                   quality={100}
                 />
-                <p className="text-white text-xl">كير اكسبريس</p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <Image
-                  src="/true.svg"
-                  alt="true"
-                  width={26}
-                  height={26}
-                  quality={100}
-                />
-                <p className="text-white text-xl">
-                  خدمات موافقات التأمين الطبية
-                </p>
+                <p className="text-white text-xl">{t("footerCareExpress")}</p>
               </div>
               <div className="flex gap-2 items-center">
                 <Image
@@ -79,7 +66,7 @@ export const FooterTop = async () => {
                   quality={100}
                 />
                 <p className="text-white text-xl">
-                  عرض السجلات الطبية ونتائج التحاليل و الأدوية الإلكترونية
+                  {t("footerMedicalServices")}
                 </p>
               </div>
               <div className="flex gap-2 items-center">
@@ -90,9 +77,17 @@ export const FooterTop = async () => {
                   height={26}
                   quality={100}
                 />
-                <p className="text-white text-xl">
-                  الكثير من الأسباب للإستمتاع
-                </p>
+                <p className="text-white text-xl">{t("showMedicalRecords")}</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/true.svg"
+                  alt="true"
+                  width={26}
+                  height={26}
+                  quality={100}
+                />
+                <p className="text-white text-xl">{t("manyReasonsToEnjoy")}</p>
               </div>
             </div>
           </div>

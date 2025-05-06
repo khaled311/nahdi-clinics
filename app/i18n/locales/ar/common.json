@@ -2,6 +2,13 @@
   "home": {
     "forYouSection": {
       "customizedForYou": "مخصصة لك"
+    },
+    "availableOn": "متوفر في",
+    "help": "المساعدة",
+    "downloadApp": "حمل التطبيق لحجز اسرع",
+    "overview": {
+      "title": "لماذا تختار عيادات النهدي؟",
+      "sub_title": "رعاية تبدأ من القلب"
     }
   },
   "categories": {
@@ -51,5 +58,52 @@
       ]
     },
     "partners": "شركائنا"
+  },
+  "overview": {
+    "title": "لماذا تختار عيادات النهدي؟",
+    "sub_title": "رعاية تبدأ من القلب"
+  },
+  "help": {
+    "title": "صحتك هي أولويتنا",
+    "subtitle": "تواصل معنا",
+    "send_message": "أرسل لنا رسالة",
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الالكتروني",
+      "phone": "الهاتف",
+      "message": "الرسالة",
+      "send": "إرسال"
+    }
+  },
+  "currency": "SAR",
+  "downloadApp": "تحميل تطبيق عيادات نهدي كير",
+  "downloadAppDescription": "احجز استشارة طبية اونلاين واستفد من خدماتنا الصحية المتعددة",
+  "quickConsultation": "استشارة فورية مع طبيب",
+  "footerCareExpress": "كير اكسبريس",
+  "footerMedicalServices": "خدمات موافقات التأمين الطبية",
+  "showMedicalRecords": "عرض السجلات الطبية ونتائج التحاليل و الأدوية الإلكترونية",
+  "manyReasonsToEnjoy": "الكثير من الأسباب للإستمتاع",
+  "footer": {
+    "description": "رعاية فائقة من قلبنا إلى قلبك، هذه هي رؤيتنا لتلبية احتياجاتك الشخصية.",
+    "moreInfo": "لمزيد من المعلومات",
+    "department": {
+      "title": "الأقسام",
+      "children": "طب الأطفال",
+      "radiology": "قسم الأشعة",
+      "gynecology": "أمراض النساء",
+      "endocrinology": "الغدد الصماء",
+      "ophthalmology": "طب العيون",
+      "all": "عرض الكل"
+    },
+    "quickLinks": {
+      "title": "الروابط السريعة",
+      "doctors": "الاطباء",
+      "packages": "باقات الرعاية الصحية",
+      "homeCare": "رعاية منزلية",
+      "departments": "الأقسام",
+      "locations": "المواقع",
+      "contactUs": "تواصل معنا"
+    },
+    "copyright": "جميع الحقوق محفوظة لشركة النهدي الطبية 2024 ©"
   }
 }

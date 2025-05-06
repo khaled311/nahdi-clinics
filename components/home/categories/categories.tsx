@@ -14,7 +14,7 @@ export const Categories = async () => {
   )) as unknown as HomeCategory[];
 
   return (
-    <div className="pt-12 lg:pb-4 pb-12 bg-white">
+    <div className="pt-12 lg:pb-4 pb-12 bg-white" id="nahdicare-categories">
       <div className="container">
         <p className="secondary-title">{t("categories.atYourService")}</p>
         <div className="flex items-center justify-between gap-4 flex-wrap">

@@ -1,50 +1,39 @@
+import { getTranslation } from "@/app/i18n";
+import { fetchEntries } from "@/lib/contentful";
+import { getLocale } from "@/lib/get-locale";
+import { Overview as TOverview } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Overview = () => {
+export const Overview = async () => {
+  const locale = await getLocale();
+  const { t } = await getTranslation(locale, "common");
+  const data = (await fetchEntries(
+    "whyNahdi",
+    locale
+  )) as unknown as TOverview[];
+
   return (
-    <div className="mt-12 mb-4">
+    <div className="mt-12 mb-4" id="why-nahdi">
       <div className="container">
-        <p className="secondary-title">لماذا تختار عيادات النهدي؟</p>
-        <h2 className="main-title">رعاية تبدأ من القلب</h2>
+        <p className="secondary-title">{t("overview.title")}</p>
+        <h2 className="main-title">{t("overview.sub_title")}</h2>
         <div className="overflow-x-auto scrollbar-hidden">
-          <div className="flex lg:items-center justify-between mb-12 lg:w-auto w-max gap-4">
-            <div className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]">
-              <Image
-                src="/overview1.svg"
-                alt="overview1"
-                width={72}
-                height={72}
-              />
-              <h3>رعاية صحية تركز على المريض</h3>
-            </div>
-            <div className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]">
-              <Image
-                src="/overview2.svg"
-                alt="overview2"
-                width={72}
-                height={72}
-              />
-              <h3>رعاية صحية تركز على المريض</h3>
-            </div>
-            <div className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]">
-              <Image
-                src="/overview3.svg"
-                alt="overview3"
-                width={72}
-                height={72}
-              />
-              <h3>رعاية صحية تركز على المريض</h3>
-            </div>
-            <div className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]">
-              <Image
-                src="/overview4.svg"
-                alt="overview4"
-                width={72}
-                height={72}
-              />
-              <h3>رعاية صحية تركز على المريض</h3>
-            </div>
+          <div className="grid lg:grid-cols-4 grid-cols-1 mb-12 lg:w-auto gap-4">
+            {data?.map((item) => (
+              <div
+                className="p-8 flex flex-col items-center gap-12 bg-[#EBF3F7] rounded-[20px]"
+                key={item.sys.id}
+              >
+                <Image
+                  src={"https:" + item.fields.image.fields.file.url}
+                  alt="overview1"
+                  width={item.fields.image.fields.file.details.image.width}
+                  height={item.fields.image.fields.file.details.image.height}
+                />
+                <h3>{item.fields.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex items-center gap-4 mt-8">
@@ -53,14 +42,14 @@ export const Overview = () => {
             className="bg-mainBlue p-[6px_12px] rounded-[6px] text-base text-white font-semibold transition-all border border-solid border-mainBlue hover:bg-transparent hover:text-mainBlue"
             target="_blank"
           >
-            احجز موعد الآن
+            {t("categories.bookAppointment")}
           </Link>
           <Link
             href={"https://healthp.nahdi.sa/patientportal/"}
             className="text-base font-semibold p-[6px_12px] rounded-[6px] transition-all text-mainBlue border border-solid border-mainBlue hover:bg-mainBlue hover:text-white"
             target="_blank"
           >
-            ابحث عن طبيب
+            {t("categories.searchDoctor")}
           </Link>
         </div>
       </div>

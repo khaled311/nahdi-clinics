@@ -267,3 +267,51 @@ export interface HomeCategory {
     brief: string;
   };
 }
+
+export interface HeroSection {
+  sys: {
+    id: string;
+  };
+  fields: {
+    backgroundImage: {
+      sys: {
+        id: string;
+      };
+      fields: {
+        file: {
+          url: string;
+          details: {
+            image: {
+              width: number;
+              height: number;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+  };
+}
+
+export interface Overview {
+  sys: {
+    id: string;
+  };
+  fields: {
+    image: {
+      fields: {
+        title: string;
+        file: {
+          url: string;
+          details: {
+            image: {
+              width: number;
+              height: number;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+  };
+}

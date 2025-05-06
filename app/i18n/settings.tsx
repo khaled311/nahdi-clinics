@@ -1,5 +1,5 @@
-export const defaultLanguage = "ar";
-export const defaultLocale = "ar";
+export const defaultLanguage = "en";
+export const defaultLocale = "en";
 export const locales = ["en", "ar"];
 const defaultNS = "common";
 export const languages = ["en", "ar"];
